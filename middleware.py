@@ -10,6 +10,20 @@ def productive_domains():
     productive_domains_list = ["www.atlassian.com", "www.udemy.com", "www.stackoverflow.com"]
     return jsonify(productive_domains_list)
 
+@app.route('/productive_apps', methods=['GET'])
+def productive_apps():
+    productive_apps_list = {
+        "Code.exe": "Visual Studio Code",
+        "WINWORD.EXE": "Microsoft Word",
+        "POWERPNT.EXE": "Microsoft PowerPoint",
+        "EXCEL.EXE": "Microsoft Excel",
+        "chrome.exe": "Google Chrome",
+        "notepad++.exe": "Notepad++",
+        "photoshop.exe": "Adobe Photoshop",
+        "illustrator.exe": "Adobe Illustrator"
+    }
+    return jsonify(productive_apps_list)
+
 @app.route('/leisure_domains', methods=['GET'])
 def leisure_domains():
     leisure_domains_list = ["www.facebook.com", "www.youtube.com", "www.instagram.com"]
@@ -52,4 +66,4 @@ def spend_attribute():
 
 if __name__ == '__main__':
     # Ejecutar en modo de desarrollo no es recomendable para producción
-    app.run()
+    app.run(port=5001)

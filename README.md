@@ -3,4 +3,4 @@ This code corresponds to middleware between the bGames framework and the bGames 
 
 # Run them following commands in the terminal:
  docker build -t middleware .
- docker run -p 5000:5000 middleware
+ docker run -p 5001:5001 middleware
