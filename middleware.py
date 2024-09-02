@@ -7,7 +7,7 @@ CORS(app)
 
 @app.route('/productive_domains', methods=['GET'])
 def productive_domains():
-    productive_domains_list = ["www.atlassian.com", "www.udemy.com", "www.stackoverflow.com"]
+    productive_domains_list = ["www.atlassian.com", "www.udemy.com", "stackoverflow.com"]
     return jsonify(productive_domains_list)
 
 @app.route('/productive_apps', methods=['GET'])
